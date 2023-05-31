@@ -19,7 +19,7 @@ struct CoverImageView: View {
                     .scaledToFill()
             }
         }
-        .tabViewStyle(PageTabViewStyle())
+        .tabViewStyle(DefaultTabViewStyle())
     }
 }
 

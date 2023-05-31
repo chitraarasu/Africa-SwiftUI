@@ -10,7 +10,7 @@ import SwiftUI
 struct VideoListView: View {
     
     @State var videos: [Video] = Bundle.main.decode("videos.json")
-    let hapticImpact = UIImpactFeedbackGenerator(style: .medium)
+//    let hapticImpact = UIImpactFeedbackGenerator(style: .medium)
     
     var body: some View {
         NavigationView {
@@ -23,13 +23,15 @@ struct VideoListView: View {
                 }
             }
             .scrollIndicators(.hidden)
-            .listStyle(InsetGroupedListStyle())
-            .navigationBarTitle("Videos", displayMode: .inline)
+//            .listStyle(InsetGroupedListStyle())
+            .navigationTitle("Videos")
+//            .navigationBarTitle("Videos", displayMode: .inline)
             .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
+//                ToolbarItem(placement: .navigationBarTrailing) {
+                ToolbarItem {
                     Button {
                         videos.shuffle()
-                        hapticImpact.impactOccurred()
+//                        hapticImpact.impactOccurred()
                     } label: {
                         Image(systemName: "arrow.2.squarepath")
                     }

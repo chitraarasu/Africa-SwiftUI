@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     
     let animals: [Animal] = Bundle.main.decode("animals.json")
-    let haptics = UIImpactFeedbackGenerator(style: .medium)
+//    let haptics = UIImpactFeedbackGenerator(style: .medium)
     
     @State var isGridViewActive = false;
     
@@ -67,15 +67,17 @@ struct ContentView: View {
                 }
             }
             .animation(.easeIn)
-            .navigationBarTitle("Africa", displayMode: .large)
+            .navigationTitle("Africa")
+//            .navigationBarTitle("Africa", displayMode: .large)
             .scrollIndicators(.hidden)
             .listStyle(PlainListStyle())
             .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
+//                ToolbarItem(placement: .navigationBarTrailing) {
+                ToolbarItem {
                     HStack(spacing: 20) {
                         Button {
                             isGridViewActive = false
-                            haptics.impactOccurred()
+//                            haptics.impactOccurred()
                             gridSwitch()
                         } label: {
                             Image(systemName: "square.fill.text.grid.1x2")
@@ -85,7 +87,7 @@ struct ContentView: View {
 
                         Button {
                             isGridViewActive = true
-                            haptics.impactOccurred()
+//                            haptics.impactOccurred()
                             gridSwitch()
                         } label: {
                             Image(systemName: toolBarIcon)

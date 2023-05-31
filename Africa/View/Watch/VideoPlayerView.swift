@@ -28,7 +28,8 @@ struct VideoPlayerView: View {
             )
         }
         .accentColor(.accentColor)
-        .navigationBarTitle(videoTitle, displayMode: .inline)
+        .navigationTitle(videoTitle)
+//        .navigationBarTitle(videoTitle, displayMode: .inline)
     }
 }
 

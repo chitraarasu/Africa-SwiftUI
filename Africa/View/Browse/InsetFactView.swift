@@ -18,7 +18,7 @@ struct InsetFactView: View {
                     Text(item)
                 }
             }
-            .tabViewStyle(PageTabViewStyle())
+            .tabViewStyle(DefaultTabViewStyle())
             .frame(minHeight: 148, idealHeight: 168, maxHeight: 180)
         }
     }
